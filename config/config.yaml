@@ -1,0 +1,39 @@
+llm:
+  provider: gemini
+  model: "gemini-2.5-flash"
+  temperature: 0.1
+  max_tokens: 1500
+  timeout_seconds: 30
+
+analysis:
+  max_text_length: 6000
+  llm_weight: 0.70
+  nlp_weight: 0.30
+
+categories:
+  - SCARCITY
+  - URGENCY
+  - CONFIRMSHAMING
+  - HIDDEN_COST
+  - FORCED_CONTINUITY
+  - MISDIRECTION
+  - SOCIAL_PROOF_MANIPULATION
+  - OBSTRUCTION
+  - NONE
+
+severity_thresholds:
+  none:
+    min: 0
+    max: 19
+  low:
+    min: 20
+    max: 39
+  medium:
+    min: 40
+    max: 59
+  high:
+    min: 60
+    max: 79
+  critical:
+    min: 80
+    max: 100

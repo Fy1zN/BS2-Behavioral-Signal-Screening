@@ -1,0 +1,178 @@
+[
+  {
+    "id": "TC-SCARCITY-01",
+    "text": "Only 2 rooms left at this price! Book now before someone else takes your room.",
+    "expected_category": "SCARCITY",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Hotel booking urgency with limited remaining stock claim."
+  },
+  {
+    "id": "TC-SCARCITY-02",
+    "text": "Almost sold out! We only have 3 items left in inventory across all warehouses.",
+    "expected_category": "SCARCITY",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "MEDIUM",
+    "description": "E-commerce stock scarcity alert."
+  },
+  {
+    "id": "TC-URGENCY-01",
+    "text": "Flash Sale ends in 04:59 minutes! Complete your checkout immediately or lose your 40% discount forever.",
+    "expected_category": "URGENCY",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Artificial countdown timer creating panic purchase pressure."
+  },
+  {
+    "id": "TC-URGENCY-02",
+    "text": "Today only! Act fast before midnight to secure your exclusive promotional pricing.",
+    "expected_category": "URGENCY",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "MEDIUM",
+    "description": "Time-limited daily deadline pressure."
+  },
+  {
+    "id": "TC-CONFIRMSHAMING-01",
+    "text": "No thanks, I don't want to save money and prefer paying full price.",
+    "expected_category": "CONFIRMSHAMING",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Classic guilt-tripping opt-out button copy on discount modal."
+  },
+  {
+    "id": "TC-CONFIRMSHAMING-02",
+    "text": "No, I choose to remain unprotected and risk my computer getting infected.",
+    "expected_category": "CONFIRMSHAMING",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Antivirus software scaremongering cancel option."
+  },
+  {
+    "id": "TC-HIDDEN_COST-01",
+    "text": "Room rate: ₹2,499. *Mandatory service fee of ₹850, cleaning surcharge of ₹400, and resort amenity fee of ₹600 added at final confirmation step.",
+    "expected_category": "HIDDEN_COST",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Drip pricing where baseline rate excludes mandatory surcharges."
+  },
+  {
+    "id": "TC-HIDDEN_COST-02",
+    "text": "Subtotal: $29.99. Final step includes automatic $7.99 handling fee and optional non-refundable package insurance pre-selected.",
+    "expected_category": "HIDDEN_COST",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "MEDIUM",
+    "description": "Unexpected handling fees and sneak-into-basket insurance."
+  },
+  {
+    "id": "TC-FORCED_CONTINUITY-01",
+    "text": "Start your free 7-day trial now. Your credit card will be automatically charged ₹1,499/month unless cancelled in account settings prior to renewal.",
+    "expected_category": "FORCED_CONTINUITY",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Trial automatically converting to paid subscription with obscure cancellation."
+  },
+  {
+    "id": "TC-FORCED_CONTINUITY-02",
+    "text": "Free trial activation! Renews automatically at $79.99/year. By continuing, you agree to auto-billing without prior notice.",
+    "expected_category": "FORCED_CONTINUITY",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Auto-renewal trap without pre-billing notice."
+  },
+  {
+    "id": "TC-MISDIRECTION-01",
+    "text": "Uncheck this box if you do not wish to not receive partner promotions and third-party sponsored emails.",
+    "expected_category": "MISDIRECTION",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Double negative confusing opt-in/opt-out checkbox."
+  },
+  {
+    "id": "TC-MISDIRECTION-02",
+    "text": "Click 'Decline Offer' to keep current price, or click highlighted green 'Upgrade Now' to avoid cancellation penalties.",
+    "expected_category": "MISDIRECTION",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "MEDIUM",
+    "description": "Asymmetric visual framing and misleading button terminology."
+  },
+  {
+    "id": "TC-SOCIAL_PROOF-01",
+    "text": "47 people are viewing this product right now! 12 customers booked in the last 15 minutes.",
+    "expected_category": "SOCIAL_PROOF_MANIPULATION",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "HIGH",
+    "description": "Simulated live social pressure and herd bias trigger."
+  },
+  {
+    "id": "TC-SOCIAL_PROOF-02",
+    "text": "High demand! Over 98% of users upgraded to Premium today. Don't be left behind.",
+    "expected_category": "SOCIAL_PROOF_MANIPULATION",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "MEDIUM",
+    "description": "Bandwagon effect assertion urging user to follow the herd."
+  },
+  {
+    "id": "TC-OBSTRUCTION-01",
+    "text": "To cancel your membership, please call our toll-free customer support hotline during business hours (Monday-Friday 9 AM-11 AM EST) and speak with a retention representative.",
+    "expected_category": "OBSTRUCTION",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "CRITICAL",
+    "description": "Roach motel pattern where online sign-up requires difficult offline cancellation."
+  },
+  {
+    "id": "TC-OBSTRUCTION-02",
+    "text": "To delete your profile, submit a notarized paper request by postal mail or complete 6 verification survey pages.",
+    "expected_category": "OBSTRUCTION",
+    "expected_is_dark_pattern": true,
+    "expected_severity_min": "CRITICAL",
+    "description": "Excessive artificial friction when attempting account deletion."
+  },
+  {
+    "id": "TC-NORMAL-01",
+    "text": "Your order total is ₹999 including all applicable taxes and standard delivery.",
+    "expected_category": "NONE",
+    "expected_is_dark_pattern": false,
+    "expected_severity_min": "NONE",
+    "description": "Completely transparent, neutral order receipt summary."
+  },
+  {
+    "id": "TC-NORMAL-02",
+    "text": "You can change your password anytime by navigating to Account Settings > Security.",
+    "expected_category": "NONE",
+    "expected_is_dark_pattern": false,
+    "expected_severity_min": "NONE",
+    "description": "Helpful, transparent navigational instruction."
+  },
+  {
+    "id": "TC-NORMAL-03",
+    "text": "Return policy: Unused items may be returned within 30 days of delivery for a full refund via the original payment method.",
+    "expected_category": "NONE",
+    "expected_is_dark_pattern": false,
+    "expected_severity_min": "NONE",
+    "description": "Standard consumer-friendly return policy."
+  },
+  {
+    "id": "TC-NORMAL-04",
+    "text": "Our store is open Monday through Saturday from 9:00 AM to 8:00 PM.",
+    "expected_category": "NONE",
+    "expected_is_dark_pattern": false,
+    "expected_severity_min": "NONE",
+    "description": "Factual store operating hours statement."
+  },
+  {
+    "id": "TC-NORMAL-05",
+    "text": "Shipping dimensions: 12 x 8 x 4 inches. Weight: 1.2 kg. Manufactured in India.",
+    "expected_category": "NONE",
+    "expected_is_dark_pattern": false,
+    "expected_severity_min": "NONE",
+    "description": "Objective product technical specifications."
+  },
+  {
+    "id": "TC-NORMAL-06",
+    "text": "Thank you for contacting customer support. A ticket has been created and our team will respond within 24 hours.",
+    "expected_category": "NONE",
+    "expected_is_dark_pattern": false,
+    "expected_severity_min": "NONE",
+    "description": "Standard support acknowledgment notification."
+  }
+]
