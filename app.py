@@ -115,7 +115,7 @@ st.markdown(
 
 # Sidebar Configuration
 with st.sidebar:
-    st.header("⚙️ Configuration & Diagnostics")
+    st.header(" Configuration & Diagnostics")
 
     # Load configuration
     try:
@@ -181,7 +181,7 @@ if "analysis_result" not in st.session_state:
     st.session_state.analysis_result = None
 
 # Example Selector
-st.markdown("##### 📌 Test with Benchmark Interface Scenarios")
+st.markdown("#####  Test with Benchmark Interface Scenarios")
 cols = st.columns(len(EXAMPLES) - 1)
 example_keys = list(EXAMPLES.keys())[1:]
 
@@ -202,8 +202,8 @@ input_text = st.text_area(
 st.session_state.user_text = input_text
 
 col_btn1, col_btn2, _ = st.columns([1, 1, 4])
-analyze_clicked = col_btn1.button("🔍 Analyze Language", type="primary", use_container_width=True)
-clear_clicked = col_btn2.button("🗑️ Clear", use_container_width=True)
+analyze_clicked = col_btn1.button(" Analyze Language", type="primary", use_container_width=True)
+clear_clicked = col_btn2.button(" Clear", use_container_width=True)
 
 if clear_clicked:
     st.session_state.user_text = ""
@@ -217,10 +217,10 @@ if analyze_clicked:
     is_valid, validation_error = validate_input_text(input_text, max_length=max_len)
 
     if not is_valid:
-        st.error(f"⚠️ Validation Error: {validation_error}")
+        st.error(f" Validation Error: {validation_error}")
     elif not api_key_input:
         st.error(
-            "🔑 Gemini API key is not configured. Add GEMINI_API_KEY to your .env file or enter it in the sidebar."
+            " Gemini API key is not configured. Add GEMINI_API_KEY to your .env file or enter it in the sidebar."
         )
     else:
         with st.spinner("Executing NLP Pipeline & Calling Google Gemini API..."):
@@ -243,27 +243,27 @@ if analyze_clicked:
                 st.session_state.analysis_result = final_result
 
             except GeminiConfigError as e:
-                st.error(f"⚙️ Configuration Error: {e}")
+                st.error(f" Configuration Error: {e}")
             except GeminiAuthError as e:
-                st.error(f"🔒 Authentication Error: {e}")
+                st.error(f" Authentication Error: {e}")
             except GeminiRateLimitError as e:
-                st.warning(f"⏳ Rate Limit Warning: {e}")
+                st.warning(f" Rate Limit Warning: {e}")
             except GeminiModelNotFoundError as e:
-                st.error(f"❌ Model Error: {e}")
+                st.error(f" Model Error: {e}")
             except GeminiTimeoutError as e:
-                st.error(f"⏱️ Timeout: {e}")
+                st.error(f" Timeout: {e}")
             except GeminiResponseValidationError as e:
-                st.error(f"📋 Validation Failure: {e}")
+                st.error(f" Validation Failure: {e}")
             except GeminiAnalyzerError as e:
-                st.error(f"🚨 LLM Error: {e}")
+                st.error(f" LLM Error: {e}")
             except Exception as e:
-                st.error(f"🚨 Unexpected Execution Error: {str(e)}")
+                st.error(f" Unexpected Execution Error: {str(e)}")
 
 # Display Results
 result = st.session_state.analysis_result
 if result:
     st.markdown("---")
-    st.subheader("📊 Behavioral Analysis Report")
+    st.subheader(" Behavioral Analysis Report")
 
     # Score and Severity Top Badges
     score_col1, score_col2, score_col3, score_col4 = st.columns(4)
@@ -336,14 +336,14 @@ if result:
             st.info("No manipulative phrases detected.")
 
     # Explanation and Recommendation
-    st.markdown("##### 💡 Semantic Explanation (Google Gemini)")
+    st.markdown("#####  Semantic Explanation (Google Gemini)")
     st.info(result.explanation)
 
-    st.markdown("##### 🛡️ Transparent Recommendation")
+    st.markdown("#####  Transparent Recommendation")
     st.success(result.recommendation)
 
     # Measurable NLP Signals
-    st.markdown("##### 🔬 Measurable NLP Signals (spaCy & NLTK)")
+    st.markdown("#####  Measurable NLP Signals (spaCy & NLTK)")
     nlp = result.nlp_features
     stat_col1, stat_col2, stat_col3, stat_col4, stat_col5 = st.columns(5)
     stat_col1.metric("Word Count", nlp.word_count)
@@ -357,7 +357,7 @@ if result:
         st.caption(f"**Recognized Entities:** {ent_str}")
 
     # Technical Analysis (Evaluator Section)
-    with st.expander("🛠️ Technical Inspection & API Details (Evaluator View)"):
+    with st.expander(" Technical Inspection & API Details (Evaluator View)"):
         st.markdown(
             f"""
             - **Google Gemini Provider**: Verified official `google-genai` integration
